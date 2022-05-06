@@ -28,8 +28,6 @@ extern "C" {
 /******************************************************
 *                      Macros
 ******************************************************/
-#define BIT_MASK(x)         ( (1 << x) - 1 )
-
 #define WHD_BUS_HEADER_SIZE                     (0)
 
 #define WHD_BUS_SDIO_MAX_BACKPLANE_TRANSFER_SIZE     (1536)

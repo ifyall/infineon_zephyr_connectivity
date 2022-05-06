@@ -890,7 +890,7 @@ static whd_result_t whd_bus_sdio_cmd53(whd_driver_t whd_driver, whd_bus_transfer
 
     arg.value = 0;
     arg.cmd53.function_number = (uint32_t)(function & BUS_FUNCTION_MASK);
-    arg.cmd53.register_address = (uint32_t)(address & BIT_MASK(17) );
+    arg.cmd53.register_address = (uint32_t)(address & CY_BIT_MASK(17) );
     arg.cmd53.op_code = (uint32_t)1;
     arg.cmd53.rw_flag = (uint32_t)( (direction == BUS_WRITE) ? 1 : 0 );
 
@@ -911,7 +911,7 @@ static whd_result_t whd_bus_sdio_cmd53(whd_driver_t whd_driver, whd_bus_transfer
     }
     else
     {
-        arg.cmd53.count = (uint32_t)( (data_size / (uint16_t)SDIO_64B_BLOCK) & BIT_MASK(9) );
+        arg.cmd53.count = (uint32_t)( (data_size / (uint16_t)SDIO_64B_BLOCK) & CY_BIT_MASK(9) );
         if ( (uint32_t)(arg.cmd53.count * (uint16_t)SDIO_64B_BLOCK) < data_size )
         {
             ++arg.cmd53.count;
