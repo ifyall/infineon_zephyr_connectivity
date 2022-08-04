@@ -49,7 +49,7 @@ endif()
 ######################################################################################### 
 # PSoC 6 Cortex M0+ image
 #########################################################################################
-if(CONFIG_SOC_FAMILY_CAT1A)
+if(CONFIG_SOC_FAMILY_INFINEON_CAT1A)
   # PSoC 6 Cortex M0+ DeepSleep prebuilt image
   if(CONFIG_SOC_PSOC6_CM0P_SLEEP)
       zephyr_library_sources_ifdef(CONFIG_SOC_DIE_PSOC6_01 psoc6cm0p/COMPONENT_CM0P_SLEEP/psoc6_01_cm0p_sleep.c)
